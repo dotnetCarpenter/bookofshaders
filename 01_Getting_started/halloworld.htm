@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hello World</title>
+  <link rel="stylesheet" href="style.css">
   <script async src="webgl.js"></script>
 </head>
 <body>
   <!-- Learn about this code on MDN: https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/By_example/Hello_GLSL -->
+  <p></p>
   <canvas>Your browser does not seem to support
     HTML5 canvas.</canvas>
   <script type="x-shader/x-vertex" id="vertex-shader">
@@ -18,19 +20,19 @@
     }
     </script>
     <script type="x-shader/x-fragment" id="fragment-shader">
-    #ifdef GL_ES
-    precision lowp float;
-    #endif
+      #ifdef GL_ES
+      precision lowp float;
+      #endif
 
-    uniform float u_time;
+      uniform float u_time;
 
-    vec3 firefundRed(){
-      return vec3(0.674, 0.109, 0.101);
-    }
+      vec3 firefundRed(){
+        return vec3(0.674, 0.109, 0.101);
+      }
 
-    void main() {
-        gl_FragColor = vec4(firefundRed(), 1.0);
-    }
+      void main() {
+          gl_FragColor = vec4(firefundRed(), 1.0);
+      }
     </script>
 </body>
 </html>
