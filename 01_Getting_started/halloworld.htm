@@ -24,8 +24,12 @@
 
     uniform float u_time;
 
+    vec4 firefundRed(){
+      return vec4(0.674, 0.109, 0.101, 1.0);
+    }
+
     void main() {
-        gl_FragColor = vec4(0.674, 0.109, 0.101, 1.0);
+        gl_FragColor = firefundRed();
     }
     </script>
 </body>
